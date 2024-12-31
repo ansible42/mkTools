@@ -10,5 +10,5 @@ RUN ls -a
 RUN cmake -S . -B _build 
 RUN cmake --build _build --config Release --parallel
 RUN cmake --install _build --config Release --prefix _built
-RUN find /_build -type f mkclean
+RUN find . -type f mkclean
 RUN mkclean
