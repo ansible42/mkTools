@@ -7,7 +7,7 @@ RUN cd /usr/src
 RUN curl -L https://github.com/Matroska-Org/foundation-source/archive/refs/tags/mkvalidator-0.6.0.tar.gz | tar -zxf -
 WORKDIR /foundation-source-mkvalidator-0.6.0
 RUN ls -a
-RUN cmake -S . -B build 
+RUN cmake -S . -B _build 
 RUN cmake --build _build --config Release --parallel
 RUN cmake --install _build --config Release --prefix _built
 RUN mkclean
