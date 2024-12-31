@@ -9,4 +9,5 @@ WORKDIR /foundation-source-mkvalidator-0.6.0
 RUN ls -a
 RUN cmake -S . -B build 
 RUN cmake --build build
+RUN cmake --install _build --config RELEASE --prefix _built
 RUN mkclean
