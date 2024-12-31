@@ -5,7 +5,7 @@ RUN apt-get update
 RUN apt-get install -y g++ curl cmake libzmq3-dev
 RUN cd /usr/src 
 RUN curl -L https://github.com/Matroska-Org/foundation-source/archive/refs/tags/mkvalidator-0.6.0.tar.gz | tar -zxf -
-RUN cd foundation-source-mkvalidator-0.6.0
+WORKDIR /foundation-source-mkvalidator-0.6.0
 RUN ls -a
 RUN cmake -S . -B build 
 RUN cmake --build build
