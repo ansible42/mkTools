@@ -8,6 +8,6 @@ RUN curl -L https://github.com/Matroska-Org/foundation-source/archive/refs/tags/
 WORKDIR /foundation-source-mkvalidator-0.6.0
 RUN ls -a
 RUN cmake -S . -B build 
-RUN cmake --build build
-RUN cmake --install _build --config RELEASE --prefix _built
+RUN cmake --build _build --config Release --parallel
+RUN cmake --install _build --config Release --prefix _built
 RUN mkclean
