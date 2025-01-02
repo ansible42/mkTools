@@ -1,4 +1,4 @@
-FROM ubuntu as buildImage 
+FROM ubuntu as builder 
 
 RUN set -e 
 RUN apt-get update 
@@ -10,7 +10,7 @@ RUN ls -a
 RUN cmake -S . -B _build 
 RUN cmake --build _build --config Release --parallel
 RUN cmake --install _build --config Release --prefix _built
-RUN find . -name *mkclean*
 RUN ls -a ./_build/mkclean
 RUN ./_build/mkclean/mkclean --help
-#RUN mkclean
+
+FROM builder AS working
