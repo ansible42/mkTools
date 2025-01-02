@@ -12,5 +12,5 @@ RUN cmake --build _build --config Release --parallel
 RUN cmake --install _build --config Release --prefix _built
 RUN find . -name *mkclean*
 RUN ls -a ./_build/mkclean
-RUn ./_build/mkclean/mkclean --help
+RUN ./_build/mkclean/mkclean --help
 #RUN mkclean
