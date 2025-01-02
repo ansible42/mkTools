@@ -14,5 +14,5 @@ RUN ls -a ./_build/mkclean
 
 #Use the small busybox image 
 FROM busybox AS working
-COPY --from=builder /foundation-source-mkvalidator-0.6.0/build/mkclean ./
+COPY --from=builder /foundation-source-mkvalidator-0.6.0/build/mkclean/ ./
 RUN ls -a ./
