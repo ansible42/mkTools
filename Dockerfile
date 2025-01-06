@@ -17,7 +17,8 @@ RUN realpath .
 
 #Use the small busybox image 
 FROM busybox AS working
-COPY --from=builder /foundation-source-mkvalidator-0.6.0/_build/mkclean/ /opt/mkclean
+COPY --from=builder /foundation-source-mkvalidator-0.6.0/_build/ /opt/mkclean
+RUN ls -a /opt/mkclean
 ENV PATH="/opt/mkclean:$PATH"
 RUN mkclean
 RUN ls -a ./
