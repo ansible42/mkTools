@@ -11,7 +11,8 @@ RUN cmake -S . -B _build
 RUN cmake --build _build --config Release --parallel
 RUN cmake --install _build --config Release --prefix _built
 RUN ls -a ./_build/mkclean
-RUN ls -a /usr/src/foundation-source-mkvalidator-0.6.0/build/mkclean/
+RUN realpath . 
+
 
 
 #Use the small busybox image 
