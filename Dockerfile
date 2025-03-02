@@ -13,3 +13,5 @@ RUN cmake --install _build --config Release --prefix _built
 RUN ls -a ./_build/mkclean
 WORKDIR /foundation-source-mkvalidator-0.6.0/_build/mkclean/
 RUN ./mkclean --version
+RUN apt-get remove -y g++ curl cmake libzmq3-dev
+RUN ./mkclean --version
