@@ -11,4 +11,4 @@ RUN cmake -S . -B _build
 RUN cmake --build _build --config Release --parallel
 RUN cmake --install _build --config Release --prefix _built
 RUN ls -a ./_build/mkclean
-RUN mkclean --version
+RUN ./_build/mkclean/mkclean --version
